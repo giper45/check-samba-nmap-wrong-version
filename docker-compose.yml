@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  samba:
+    build: ./samba
+   # ports:
+    #   - "139:139"
+    #   - "445:445"
+  nmap:
+    build: ./nmap
+    depends_on:
+      - samba
